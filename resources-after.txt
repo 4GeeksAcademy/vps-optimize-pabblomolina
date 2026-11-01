@@ -1,0 +1,34 @@
+INFORME AFTER - VPS bc-vps-477
+Fecha: 2026-11-01
+
+VPS listo para los despliegues de la compania.
+Acceso: por SSH (root@bc-vps-477), sin usar la consola web.
+
+Optimizacion aplicada (segun la leccion del curso):
+- apport: detenido y deshabilitado (inactive / disabled)
+- multipathd: detenido y deshabilitado (inactive)
+- cups, avahi-daemon, modemmanager, bluetooth: no activos (inactive)
+- popularity-contest: no instalado
+- snapd: se mantiene activo porque lxd esta instalado como snap
+- SSH sigue funcionando tras los cambios
+
+--- SO ---
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+
+--- RAM (free -h) ---
+               total        used        free      shared  buff/cache   available
+Mem:           957Mi       167Mi        73Mi       4.0Mi       715Mi       634Mi
+Swap:             0B          0B          0B
+
+--- Disco (df -h) ---
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs            96M 1020K   95M   2% /run
+/dev/vda1        25G  2.7G   22G  12% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/vda15      105M  6.1M   99M   6% /boot/efi
+tmpfs            96M  4.0K   96M   1% /run/user/0
